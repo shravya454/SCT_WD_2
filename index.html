@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="bg-grid"></div>
+    <div class="bg-glow"></div>
+
+    <div class="wrapper">
+
+        <header>
+            <div class="logo">
+                <span class="logo-icon">◈</span>
+                <span class="logo-name">Stopwatch</span>
+            </div>
+        </header>
+
+        <!-- Timer Section -->
+        <div class="timer-section">
+            <div class="ring-box">
+                <svg class="ring-svg" viewBox="0 0 300 300">
+                    <circle class="ring-bg"   cx="150" cy="150" r="130" />
+                    <circle class="ring-fill" cx="150" cy="150" r="130" id="ringFill" />
+                </svg>
+
+                <div class="time-display">
+                    <div class="time-main" id="timeDisplay">00:00:00</div>
+                    <div class="time-ms"   id="timeMs">.000</div>
+                    <div class="time-label" id="timeLabel">READY</div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button class="btn btn-side" id="lapBtn" onclick="recordLap()" disabled>
+                    <span>◎</span>
+                    <span>LAP</span>
+                </button>
+
+                <button class="btn btn-main" id="startStopBtn" onclick="startStop()">
+                    <span id="startStopIcon">▶</span>
+                    <span id="startStopText">START</span>
+                </button>
+
+                <button class="btn btn-side" id="resetBtn" onclick="resetTimer()" disabled>
+                    <span>↺</span>
+                    <span>RESET</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Lap Records Section -->
+        <div class="records-section">
+            <div class="lap-header">
+                <span class="lap-title">LAP RECORDS</span>
+                <span class="lap-count" id="lapCount">0 LAPS</span>
+            </div>
+
+            <div class="lap-list" id="lapList">
+                <div class="lap-empty" id="lapEmpty">
+                    <div class="lap-empty-icon">⏱</div>
+                    <div>No laps recorded yet</div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <span>© 2023 Stopwatch Application</span>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
