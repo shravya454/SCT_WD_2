@@ -19,7 +19,7 @@ A clean, fully responsive stopwatch application built with HTML, CSS, and JavaSc
 
 ## Technologies Used
 
-* HTML5
+* HTML
 * CSS
 * JavaScript
 
